@@ -1,0 +1,127 @@
+@keyframes opacityTransition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2em;
+  right: 4em;
+
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+
+    &.icons {
+      animation: opacityTransition 0.5s ease-out;
+    }
+
+    .icon {
+      padding: 0px 11px;
+      font-size: 2.5em;
+    }
+    .facebook {
+      background-color: white;
+      color: #4867aa;
+      cursor: pointer;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(2px);
+      transition: all ease-in-out 150ms;
+      border-radius: 50%;
+      &:hover {
+        margin-top: -10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        transform: translate(0, -8);
+      }
+      color: #4867aa;
+      cursor: pointer;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(2px);
+      transition: all ease-in-out 150ms;
+      border-radius: 50%;
+      &:hover {
+        margin-top: -10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        transform: translate(0, -8);
+      }
+    }
+    .linkedin {
+      background-color: white;
+      color: #0a66c2;
+      cursor: pointer;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(2px);
+      transition: all ease-in-out 150ms;
+      border-radius: 50%;
+
+      &:hover {
+        margin-top: -10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        transform: translate(0, -8);
+      }
+    }
+    .tiktok {
+      background-color: white;
+      color: #000000;
+      cursor: pointer;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(2px);
+      transition: all ease-in-out 150ms;
+      border-radius: 50%;
+
+      &:hover {
+        margin-top: -10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        transform: translate(0, -8);
+      }
+    }
+
+    .github {
+      background-color: white;
+      color: #171515;
+      cursor: pointer;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(2px);
+      transition: all ease-in-out 150ms;
+      border-radius: 50%;
+
+      &:hover {
+        margin-top: -10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        transform: translate(0, -8);
+      }
+    }
+  }
+
+  .shareSocials-container {
+  position: fixed;
+  bottom: 2em;
+  right: 0.5em;
+  animation: opacityTransition 0.5s ease-out;
+  
+  .shareSocials {
+    padding: 0 11px;
+    background-color: white;
+    color: #4867aa;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    transition: all ease-in-out 150ms;
+    border-radius: 50%;
+    font-size: 2.5em;
+  }
+}
+
+}
+
+

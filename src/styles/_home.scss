@@ -1,0 +1,436 @@
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+// MOUSE SCROLL ANIMATION
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+.home-container {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box {
+    position: absolute;
+    bottom: 3rem;
+    // width: 100%;
+    // border: solid;
+    // display: flex;
+    // justify-content: center;
+
+    span {
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-bottom: 2px solid rgb(0, 0, 0);
+      border-right: 2px solid rgb(0, 0, 0);
+      transform: rotate(45deg);
+      margin: -10px;
+      animation: animate 2s infinite;
+
+      &:nth-child(2) {
+        animation-delay: -0.2s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: -0.4s;
+      }
+    }
+  }
+  .home--container {
+    border: solid;
+    width: 90%;
+    height: 30vh;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .section1-container > .shadow1 {
+        bottom: 0;
+        transition: all 0.25s ease;
+      }
+      .section1-container > .shadow2 {
+        top: 0;
+        transition: all 0.25s ease;
+      }
+      .section2-container > .shadow3 {
+        bottom: 0;
+        transition: all 0.25s ease;
+      }
+      .section2-container > .shadow4 {
+        top: 0;
+        transition: all 0.25s ease;
+      }
+      .section3-container > .shadow5 {
+        bottom: 0;
+        margin-left: -14em;
+        transition: all 0.5s;
+        animation: rotate 2s;
+      }
+      .section3-container > .shadow6 {
+        top: 0;
+        margin-right: -13em;
+        transition: all 0.5s;
+        animation: rotate2 2s;
+      }
+      .greeting-container {
+        // border: none;
+        width: 100%;
+        display: block;
+        font-size: 1rem;
+        transition: all 0.25s ease;
+      }
+    }
+
+    .greeting-container {
+      // border: none;
+      width: 100%;
+      position: absolute;
+      display: none;
+      transition: all 0.25s ease;
+
+      p {
+        width: 8em;
+        // border: none;
+        font-family: var(--font);
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin: 0 auto;
+        transition: all 0.25s ease;
+      }
+    }
+
+    .section1-container {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height: 15em;
+      width: 100%;
+      transition: all 0.25s ease;
+
+      .shadow1 {
+        position: absolute;
+        bottom: 3em;
+        transition: all 0.25s ease;
+      }
+
+      .shadow2 {
+        position: absolute;
+        top: 3em;
+        transition: all 0.25s ease;
+      }
+    }
+
+    .section2-container {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height: 15em;
+      width: 100%;
+      transition: all 0.25s ease;
+
+      .shadow3 {
+        position: absolute;
+        bottom: 3em;
+        right: 0;
+        transition: all 0.25s ease;
+      }
+
+      .shadow4 {
+        position: absolute;
+        top: 3em;
+        right: 0;
+        transition: all 0.25s ease;
+      }
+    }
+    .section3-container {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 15em;
+      width: 100%;
+      transition: all 0.25s ease;
+
+      .shadow5 {
+        position: absolute;
+        bottom: 2.75em;
+
+        margin-left: -2.5em;
+        transition: all 0.25s ease;
+      }
+
+      .shadow6 {
+        position: absolute;
+        top: 2.75em;
+
+        margin-left: 1.35em;
+        transition: all 0.25s ease;
+      }
+    }
+  }
+}
+
+// $min:330px;
+// $mobile:400px;
+// $mobile1:834px;
+// $tablet1: 834px;
+// $tablet2: 1180px;
+// $laptop:1180px;
+
+@media (max-width: $min) {
+  .home-container {
+    .home--container {
+      &::before {
+        content: "Hi, I'am Dale a front-end developer";
+        width: 8em;
+        border: none;
+
+        font-family: var(--font);
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin: 0 auto;
+        transition: all 0.5s ease;
+      }
+      position: absolute;
+    }
+
+    .greeting-container {
+      opacity: 0;
+    }
+  }
+  .section1-container {
+    transition: all 0.25s ease;
+
+    .shadow1 {
+      display: none;
+
+      transition: all 0.25s ease;
+    }
+    .shadow2 {
+      display: none;
+      transition: all 0.25s ease;
+    }
+  }
+  .section2-container {
+    transition: all 0.25s ease;
+
+    .shadow3 {
+      display: none;
+      transition: all 0.25s ease;
+    }
+    .shadow4 {
+      display: none;
+      transition: all 0.25s ease;
+    }
+  }
+  .section3-container {
+    .shadow5 {
+      display: none;
+      transition: all 0.25s ease;
+    }
+    .shadow6 {
+      display: none;
+      transition: all 0.25s ease;
+    }
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $mobile1) {
+  .home-container {
+    .home--container {
+      max-width: 389px;
+
+      .section1-container {
+        transition: all 0.25s ease;
+      }
+      .section2-container {
+        transition: all 0.25s ease;
+      }
+      .section3-container {
+        transition: all 0.25s ease;
+      }
+
+      .greeting-container {
+        width: 10em;
+        transition: all 0.25s ease;
+      }
+    }
+  }
+}
+
+@mixin tabletLaptop($fontSize: 2rem) {
+  .home-container {
+    .home--container {
+      height: 50vh;
+      max-width: 600px;
+      transition: all 0.25s ease;
+      position: relative;
+
+      .section1-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 25em;
+        width: 100%;
+        transition: all 0.25s ease;
+
+        .shadow1 {
+          position: absolute;
+
+          width: 12em;
+          bottom: 5em;
+        }
+        .shadow2 {
+          width: 12em;
+          top: 5em;
+          left: 0;
+        }
+      }
+
+      .section2-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 25em;
+        width: 100%;
+        transition: all 0.25s ease;
+
+        .shadow3 {
+          width: 12em;
+          position: absolute;
+          border: none;
+          bottom: 5em;
+          right: 0;
+          transition: all 0.25s ease;
+        }
+
+        .shadow4 {
+          width: 12em;
+          top: 5em;
+          right: 0;
+          transition: all 0.25s ease;
+        }
+      }
+
+      .section3-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 25em;
+        width: 100%;
+        transition: all 0.25s ease ease;
+
+        .shadow5 {
+          width: 12.5em;
+          height: 8.5em;
+          bottom: 4.25em;
+          margin-left: -4em;
+          transition: all 0.25s ease;
+        }
+        .shadow6 {
+          width: 12.5em;
+          height: 8.5em;
+          top: 4.5em;
+          margin-left: 2.5em;
+          transition: all 0.25s ease;
+        }
+      }
+
+      &:hover {
+        .section1-container > .shadow1 {
+          bottom: 0;
+          transition: all 0.25s ease;
+        }
+
+        .section1-container > .shadow2 {
+          top: 0;
+          transition: all 0.25s ease;
+        }
+        .section2-container > .shadow3 {
+          bottom: 0;
+          transition: all 0.25s ease;
+        }
+        .section2-container > .shadow4 {
+          top: 0;
+          transition: all 0.25s ease;
+        }
+        .section3-container > .shadow5 {
+          bottom: -1em;
+          margin-left: -19em;
+          transition: all 0.25s ease;
+          animation: rotate 2s;
+        }
+        .section3-container > .shadow6 {
+          top: -1em;
+          margin-right: -16em;
+          transition: all 0.25s ease;
+          animation: rotate2 2s;
+        }
+
+        .greeting-container {
+          width: 100%;
+
+          display: block;
+          font-size: $fontSize;
+          transition: all 0.25s ease ease;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet1) and (max-width: $tablet2) {
+  @include tabletLaptop($fontSize: 1.5rem);
+}
+
+@media (min-width: $laptop) {
+  @include tabletLaptop();
+  .home-container {
+    .home--container {
+      &:hover {
+        .section3-container > .shadow5 {
+          bottom: -2em;
+
+          animation: rotate 2s;
+        }
+        .section3-container > .shadow6 {
+          top: -2em;
+
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}

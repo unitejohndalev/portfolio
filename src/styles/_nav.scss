@@ -1,0 +1,187 @@
+@mixin border {
+  border: none;
+}
+
+@mixin displayFlex($gap: 2em, $content: center) {
+  display: flex;
+  justify-content: $content;
+  align-items: center;
+  gap: $gap;
+}
+
+nav {
+  @include displayFlex($gap: 0, $content: end);
+  position: fixed;
+  top: -5rem;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  .components-container {
+    display: none;
+    transition: all 0.25s ease-out;
+  }
+
+  .icons-container {
+    @include displayFlex();
+    padding: 1.2em 0;
+    width: 9rem;
+    position: absolute;
+    right: 0;
+    border-radius: 0 0 0 5rem;
+  }
+
+  .faicons-bar {
+    @include border();
+    position: absolute;
+    font-size: 2em;
+    width: 0.8em;
+    right: 1.5rem;
+    transition: all 0.25s ease-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .faicons-moon {
+    @include border();
+    position: absolute;
+    font-size: 2em;
+    width: 0.8em;
+    left: 3rem;
+    transition: all 0.25s ease-out;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: $mobile1) {
+  nav {
+    .components-container {
+      display: none;
+      transition: all 0.25s ease-out;
+    }
+
+    .faicons-bar {
+      font-size: -0;
+      transition: all 0.25s ease-in;
+    }
+
+    .faicons-moon {
+      position: absolute;
+      z-index: 1000;
+      width: 0.8em;
+      right: 1em;
+      transition: all 0.25s ease-in;
+    }
+  }
+}
+
+@media (min-width: $tablet1) and (max-width: $tablet2) {
+  nav {
+
+     .icons-container {
+      .faicons-moon {
+        left: 5rem;
+    transition: all 0.25s ease;
+
+      }
+    }
+    .components-container {
+      display: flex;
+      position: absolute;
+      left: 8rem;
+
+      align-items: center;
+      gap: 1em;
+      width: 100%;
+      transition: all 0.25s ease-out;
+
+      a {
+        text-decoration: none;
+      
+        color: white;
+        transition: all 0.25s ease-out;
+
+        li {
+          //  color: rgb(0, 0, 0);
+          font-weight: normal;
+          list-style: none;
+          font-size: 0.85rem;
+
+          padding: 1rem 1rem;
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          backdrop-filter: blur(2px);
+          font-family: var(--font);
+          transition: all 0.25s ease-out;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet1) {
+  nav {
+    padding: 0;
+    width: 9rem;
+    right: 0;
+    border-radius: 0 0 0 5rem;
+    box-shadow: none;
+    transition: all 0.25s ease;
+  }
+}
+
+@media (min-width: $laptop) {
+  nav {
+
+    .icons-container {
+      .faicons-moon {
+        left: 5rem;
+    transition: all 0.25s ease;
+
+      }
+    }
+    .components-container {
+      display: flex;
+      position: absolute;
+      left: 0;
+
+      align-items: center;
+      gap: 1em;
+      width: 100%;
+      margin-left: 5em;
+
+      a {
+        text-decoration: none;
+        // border: solid;
+        color: white;
+        &:nth-child(5) {
+          // border: solid;
+          margin-left: 10em;
+        }
+
+        li {
+          //  color: rgb(0, 0, 0);
+          font-weight: normal;
+          list-style: none;
+          font-size: 1em;
+
+          padding: 1rem 2rem;
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          backdrop-filter: blur(2px);
+          font-family: var(--font);
+          transition: all 0.25s ease-out;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

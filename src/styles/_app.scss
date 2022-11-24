@@ -1,0 +1,40 @@
+.app-container {
+    width: 100%;
+    margin: 0 auto;
+    // border: solid;
+
+    
+    .components-container {
+        border: none;
+
+        // #home-section {
+        //   transition: all .25s ease-in;
+
+        // }
+        // #about-section {
+        //     transition: all .25s;
+        // }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+  
+}
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   background: transparent; 
+  
+// }
+ 
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: #888; 
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555; 
+// }

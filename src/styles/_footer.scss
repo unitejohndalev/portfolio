@@ -1,0 +1,20 @@
+.footer-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+    background: #252734;
+    color: #fff;
+
+    .copyright {
+        font-size: .8rem;
+    }
+
+    p {
+        font-family: var(--font);
+        font-weight: 400;
+        font-size: .8rem;
+
+        
+    }
+}
