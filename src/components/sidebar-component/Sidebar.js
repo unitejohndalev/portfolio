@@ -27,7 +27,10 @@ export default function Sidebar({ sidebar, closesidebar }) {
           <li>Contact Me</li>
         </a>
 
-        <a href="https://drive.google.com/file/d/1E77y8tON9IW22kdngoQOhUAKob1j5czJ/view?usp=share_link" target="_blank">
+        <a
+          href="https://drive.google.com/file/d/1JHLzXOxzicjtjaBAEltzJOucV4-8LspK/view?usp=sharing"
+          target="_blank"
+        >
           <li>Resume</li>
         </a>
       </div>
